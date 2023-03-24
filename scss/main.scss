@@ -1,0 +1,332 @@
+@use "./colors" as *;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	scroll-padding-top: 94px;
+}
+
+body {
+	background-color: $white-color;
+	font-size: 1.6rem;
+}
+
+body, input, button {
+	font-family: "Open Sans", sans-serif;
+}
+
+button {
+	border-radius: 1em;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.nav {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background-color: $bg-color;
+	color: $white-color;
+	z-index: 1000;
+
+	.flex-nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	h2 {
+		margin: 0 1em;
+		padding: 1em 0;
+		font-size: 2rem;
+
+		i {
+			padding: 0 0.5em;
+		}
+
+		span {
+			color: $main-color;
+		}
+		
+		a {
+			text-decoration: none;
+			color: $white-color;
+		}
+	}
+
+	button {
+		margin: 0 0.5em;
+		padding: 0.5em;
+		font-size: 2.2rem;
+		border: 1px solid transparent;
+		background: none;
+		color: $white-color;
+		cursor: pointer;
+	}
+
+	ul {
+		display: none;
+		list-style: none;
+
+		li {
+			padding: 0 1em;
+
+			a {
+				text-decoration: none;
+				color: $white-color;
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+
+.hero-img {
+	position: relative;
+	height: 500px;
+	background-image: url("../img/animal-small.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+
+	.hero-bg {
+		width: 100%;
+		height: 100%;
+		background-color: rgba(8, 8, 18, 0.7);
+	}
+
+	.hero-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 1.6rem;
+		color: $white-color;
+
+		p {
+			padding: 1em 0;
+			font-size: 1.8rem;
+		}
+
+		span {
+			color: $main-color;
+		}
+	}
+
+	button {
+		margin-top: 1em;
+		padding: 1em 2em;
+		font-size: 1.6rem;
+		border: 1px solid transparent;
+		background-color: $bg-color;
+		color: $white-color;
+		cursor: pointer;
+	}
+}
+
+.about-us {
+	height: 750px;
+	text-align: center;
+	background-color: $dark-white;
+	color: $black-color;
+	overflow: hidden;
+
+	h2 {
+	    padding: 1.5em;
+		font-size: 3.2rem;
+		letter-spacing: 2px;
+	}
+
+	p {
+		padding: 0 1.2em;
+		font-size: 1.8rem;
+		text-align: left;
+	}
+}
+
+.offert {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 400px;
+	background-color: $bg-color;
+	color: $white-color;
+
+	&-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	justify-content: center;
+	text-align: center;
+		padding: 1em 1em;
+		font-size: 2rem;
+
+		i {
+			padding: 0.5em 1em;
+			color: $main-color;
+			font-size: 2.4rem;
+		}
+	}
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	font-size: 2rem;
+	text-align: center;
+	
+	&-box {
+		padding: 1em;
+	}
+
+	p {
+		color: $black-color;
+	}
+	 
+	i {
+		padding: 1em;
+		margin: 1em;
+		border-radius: 50%;
+		color: $white-color;
+		background-color: $bg-color;
+	}
+}
+
+@media (min-width: 576px) {
+	.nav {
+		h2 {
+			font-size: 2.2rem;
+		}
+
+		button {
+			font-size: 2.4rem;
+		}
+	}
+
+	.hero-img {
+		.hero-text {
+			font-size: 1.8rem;
+
+			p {
+				font-size: 2rem;
+			}
+		}
+
+		button {
+			font-size: 1.8rem;
+		}
+	}
+
+	.about-us {
+		height: 500px;
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		h2 {
+			font-size: 2.4rem;
+		}
+
+		button {
+			font-size: 2.6rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav {
+		ul {
+			display: flex;
+		}
+
+		button {
+			display: none;
+		}
+
+		h2 {
+			font-size: 2.6rem;
+		}
+	}
+
+	.hero-img {
+		background-image: url("../img/animal-big.jpg");
+	}
+
+	.about-us {
+		h2{
+			font-size: 3.4rem;
+		}
+
+		p {
+			font-size: 2rem;
+		}
+	}
+
+	.offert {
+		flex-direction: row;
+
+		&-box {
+			font-size: 2.2rem;
+		}
+	}
+
+	.contact {
+		flex-direction: row;
+		justify-content: space-evenly;
+		font-size: 2.2rem;
+	}
+}
+
+@media (min-width: 1400px) {
+	.nav {
+		h2 {
+			font-size: 2.8rem;
+		}
+
+		ul {
+			li{
+				a {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+
+	.hero-img {
+		.hero-text {
+			font-size: 2rem;
+
+			p {
+				font-size: 2.2rem;
+			}
+		}
+
+		button {
+			font-size: 2rem;
+		}
+	}
+
+	.offert {
+		&-box {
+			font-size: 2.4rem;
+		}
+	}
+
+	.contact {
+		font-size: 2.4rem;
+	}
+}

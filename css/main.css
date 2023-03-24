@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 94px;
+}
+
+body {
+  background-color: #FFFFFF;
+  font-size: 1.6rem;
+}
+
+body, input, button {
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  border-radius: 1em;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #14213D;
+  color: #FFFFFF;
+  z-index: 1000;
+}
+.nav .flex-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav h2 {
+  margin: 0 1em;
+  padding: 1em 0;
+  font-size: 2rem;
+}
+.nav h2 i {
+  padding: 0 0.5em;
+}
+.nav h2 span {
+  color: #FCA311;
+}
+.nav h2 a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.nav button {
+  margin: 0 0.5em;
+  padding: 0.5em;
+  font-size: 2.2rem;
+  border: 1px solid transparent;
+  background: none;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.nav ul {
+  display: none;
+  list-style: none;
+}
+.nav ul li {
+  padding: 0 1em;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+}
+
+.hero-img {
+  position: relative;
+  height: 500px;
+  background-image: url("../img/animal-small.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.hero-img .hero-bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(8, 8, 18, 0.7);
+}
+.hero-img .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6rem;
+  color: #FFFFFF;
+}
+.hero-img .hero-text p {
+  padding: 1em 0;
+  font-size: 1.8rem;
+}
+.hero-img .hero-text span {
+  color: #FCA311;
+}
+.hero-img button {
+  margin-top: 1em;
+  padding: 1em 2em;
+  font-size: 1.6rem;
+  border: 1px solid transparent;
+  background-color: #14213D;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.about-us {
+  height: 750px;
+  text-align: center;
+  background-color: #E5E5E5;
+  color: #000000;
+  overflow: hidden;
+}
+.about-us h2 {
+  padding: 1.5em;
+  font-size: 3.2rem;
+  letter-spacing: 2px;
+}
+.about-us p {
+  padding: 0 1.2em;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.offert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+  background-color: #14213D;
+  color: #FFFFFF;
+}
+.offert-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1em 1em;
+  font-size: 2rem;
+}
+.offert-box i {
+  padding: 0.5em 1em;
+  color: #FCA311;
+  font-size: 2.4rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  text-align: center;
+}
+.contact-box {
+  padding: 1em;
+}
+.contact p {
+  color: #000000;
+}
+.contact i {
+  padding: 1em;
+  margin: 1em;
+  border-radius: 50%;
+  color: #FFFFFF;
+  background-color: #14213D;
+}
+
+@media (min-width: 576px) {
+  .nav h2 {
+    font-size: 2.2rem;
+  }
+  .nav button {
+    font-size: 2.4rem;
+  }
+  .hero-img .hero-text {
+    font-size: 1.8rem;
+  }
+  .hero-img .hero-text p {
+    font-size: 2rem;
+  }
+  .hero-img button {
+    font-size: 1.8rem;
+  }
+  .about-us {
+    height: 500px;
+  }
+}
+@media (min-width: 768px) {
+  .nav h2 {
+    font-size: 2.4rem;
+  }
+  .nav button {
+    font-size: 2.6rem;
+  }
+}
+@media (min-width: 992px) {
+  .nav ul {
+    display: flex;
+  }
+  .nav button {
+    display: none;
+  }
+  .nav h2 {
+    font-size: 2.6rem;
+  }
+  .hero-img {
+    background-image: url("../img/animal-big.jpg");
+  }
+  .about-us h2 {
+    font-size: 3.4rem;
+  }
+  .about-us p {
+    font-size: 2rem;
+  }
+  .offert {
+    flex-direction: row;
+  }
+  .offert-box {
+    font-size: 2.2rem;
+  }
+  .contact {
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 1400px) {
+  .nav h2 {
+    font-size: 2.8rem;
+  }
+  .nav ul li a {
+    font-size: 2rem;
+  }
+  .hero-img .hero-text {
+    font-size: 2rem;
+  }
+  .hero-img .hero-text p {
+    font-size: 2.2rem;
+  }
+  .hero-img button {
+    font-size: 2rem;
+  }
+  .offert-box {
+    font-size: 2.4rem;
+  }
+  .contact {
+    font-size: 2.4rem;
+  }
+}/*# sourceMappingURL=main.css.map */
