@@ -17,7 +17,9 @@ body {
   font-size: 1.6rem;
 }
 
-body, input, button {
+body,
+input,
+button {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -43,6 +45,33 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.nav--active {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+.nav--active button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.nav--active h2 {
+  display: none;
+}
+.nav--active .nav-ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+}
+.nav--active .nav-ul li {
+  padding: 0.5em;
+}
+.nav--active .nav-ul a {
+  font-size: 2.5rem;
 }
 .nav .link {
   position: relative;

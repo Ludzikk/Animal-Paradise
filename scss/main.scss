@@ -19,7 +19,9 @@ body {
 	font-size: 1.6rem;
 }
 
-body, input, button {
+body,
+input,
+button {
 	font-family: "Open Sans", sans-serif;
 }
 
@@ -47,9 +49,42 @@ button {
 		align-items: center;
 	}
 
+	&--active {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		width: 100%;
+
+		button {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+		}
+
+		h2 {
+			display: none;
+		}
+
+		.nav-ul {
+			display: flex;
+			flex-direction: column;
+			font-size: 4rem;
+
+			li {
+				padding: 0.5em;
+			}
+
+			a {
+				font-size: 2.5rem;
+			}
+		}
+	}
+
 	.link {
 		position: relative;
-		transition: color .3s;
+		transition: color 0.3s;
 	}
 
 	.link:hover {
@@ -58,15 +93,15 @@ button {
 
 	.link::before {
 		content: "";
-	position: absolute;
-	bottom: -5px;
-	left: 0;
-	height: 2px;
-	width: 100%;
-	background-color: #fff;
-	transform: scaleX(0);
-	transform-origin: left;
-	transition: transform 0.3s;
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		height: 2px;
+		width: 100%;
+		background-color: #fff;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.3s;
 	}
 
 	.link:hover::before {
@@ -85,7 +120,7 @@ button {
 		span {
 			color: $main-color;
 		}
-		
+
 		a {
 			text-decoration: none;
 			color: $white-color;
@@ -158,7 +193,7 @@ button {
 		background-color: $bg-color;
 		color: $white-color;
 		cursor: pointer;
-		transition: transform .3s;
+		transition: transform 0.3s;
 	}
 
 	button:hover {
@@ -174,7 +209,7 @@ button {
 	overflow: hidden;
 
 	h2 {
-	    padding: 1.5em;
+		padding: 1.5em;
 		font-size: 3.2rem;
 		letter-spacing: 2px;
 	}
@@ -200,8 +235,8 @@ button {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	justify-content: center;
-	text-align: center;
+		justify-content: center;
+		text-align: center;
 		padding: 1em 1em;
 		font-size: 2rem;
 
@@ -218,7 +253,7 @@ button {
 	flex-direction: column;
 	font-size: 2rem;
 	text-align: center;
-	
+
 	&-box {
 		padding: 1em;
 	}
@@ -226,14 +261,14 @@ button {
 	p {
 		color: $black-color;
 	}
-	 
+
 	i {
 		padding: 1em;
 		margin: 1em;
 		border-radius: 50%;
 		color: $white-color;
 		background-color: $bg-color;
-		transition: color .3s;
+		transition: color 0.3s;
 	}
 
 	i:hover {
@@ -318,7 +353,7 @@ footer {
 	}
 
 	.about-us {
-		h2{
+		h2 {
 			font-size: 3.4rem;
 		}
 
@@ -353,7 +388,7 @@ footer {
 		}
 
 		ul {
-			li{
+			li {
 				a {
 					font-size: 2rem;
 				}
