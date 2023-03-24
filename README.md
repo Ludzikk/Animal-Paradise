@@ -1,6 +1,6 @@
 # Bebflix - login panel for movie site
 
-**Used Languages/Technology:**
+**Used Languages/Technologies:**
 
 1. HTML
 2. CSS
