@@ -47,6 +47,32 @@ button {
 		align-items: center;
 	}
 
+	.link {
+		position: relative;
+		transition: color .3s;
+	}
+
+	.link:hover {
+		color: $main-color;
+	}
+
+	.link::before {
+		content: "";
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background-color: #fff;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s;
+	}
+
+	.link:hover::before {
+		transform: scaleX(1);
+	}
+
 	h2 {
 		margin: 0 1em;
 		padding: 1em 0;
@@ -132,6 +158,11 @@ button {
 		background-color: $bg-color;
 		color: $white-color;
 		cursor: pointer;
+		transition: transform .3s;
+	}
+
+	button:hover {
+		transform: scale(1.05);
 	}
 }
 
@@ -202,6 +233,11 @@ button {
 		border-radius: 50%;
 		color: $white-color;
 		background-color: $bg-color;
+		transition: color .3s;
+	}
+
+	i:hover {
+		color: $main-color;
 	}
 }
 

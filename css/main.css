@@ -44,6 +44,28 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+.nav .link {
+  position: relative;
+  transition: color 0.3s;
+}
+.nav .link:hover {
+  color: #FCA311;
+}
+.nav .link::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+.nav .link:hover::before {
+  transform: scaleX(1);
+}
 .nav h2 {
   margin: 0 1em;
   padding: 1em 0;
@@ -117,6 +139,10 @@ button {
   background-color: #14213D;
   color: #FFFFFF;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+.hero-img button:hover {
+  transform: scale(1.05);
 }
 
 .about-us {
@@ -180,6 +206,10 @@ button {
   border-radius: 50%;
   color: #FFFFFF;
   background-color: #14213D;
+  transition: color 0.3s;
+}
+.contact i:hover {
+  color: #FCA311;
 }
 
 footer {
