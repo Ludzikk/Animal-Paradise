@@ -5,6 +5,7 @@
 1. HTML
 2. CSS
 3. SCCS
+4. JS
 
 ***Fully working site about vet company. Fully responsive.***
 
